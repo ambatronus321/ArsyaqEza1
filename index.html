@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang MTK SMP - Belajar Matematika Asik</title>
+    <!-- Tailwind CSS untuk Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bagian CSS Khusus jika diperlukan -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .math-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Transisi untuk kartu materi */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-indigo-600 flex items-center gap-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        RuangMTK
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-slate-600 hover:text-indigo-600 font-medium">Beranda</a>
+                    <a href="#materi" class="text-slate-600 hover:text-indigo-600 font-medium">Materi</a>
+                    <a href="#interaktif" class="text-slate-600 hover:text-indigo-600 font-medium">Latihan Interaktif</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#beranda" class="block px-4 py-2 text-slate-600 hover:bg-indigo-50">Beranda</a>
+            <a href="#materi" class="block px-4 py-2 text-slate-600 hover:bg-indigo-50">Materi</a>
+            <a href="#interaktif" class="block px-4 py-2 text-slate-600 hover:bg-indigo-50">Latihan Interaktif</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="math-pattern bg-indigo-50 py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+                Belajar Matematika SMP Jadi <span class="text-indigo-600">Lebih Menyenangkan!</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                Pahami konsep Aljabar, Bangun Ruang, Teorema Pythagoras, hingga Statistika dengan mudah melalui rangkuman materi dan latihan interaktif.
+            </p>
+            <a href="#materi" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+                Mulai Belajar Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- MATERI SECTION -->
+    <section id="materi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Materi Kelas VII - IX</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto mt-4 rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Aljabar -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">
+                        𝑥²
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bentuk Aljabar</h3>
+                    <p class="text-slate-600 mb-4">Mengenal variabel, koefisien, konstanta, dan operasi hitung (penjumlahan, pengurangan, perkalian, pembagian) pada bentuk aljabar.</p>
+                </div>
+
+                <!-- Card 2: Bangun Ruang -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4 text-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bangun Ruang Sisi Datar</h3>
+                    <p class="text-slate-600 mb-4">Mempelajari jaring-jaring, luas permukaan, dan volume dari kubus, balok, prisma, dan limas.</p>
+                </div>
+
+                <!-- Card 3: Teorema Pythagoras -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">
+                        ⊿
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Teorema Pythagoras</h3>
+                    <p class="text-slate-600 mb-4">Memahami rumus c² = a² + b² untuk mencari panjang sisi pada segitiga siku-siku dan penerapannya dalam kehidupan sehari-hari.</p>
+                </div>
+
+                <!-- Card 4: Himpunan -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">
+                        ∪
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Himpunan</h3>
+                    <p class="text-slate-600 mb-4">Mengenal konsep himpunan, diagram Venn, irisan, gabungan, selisih, dan komplemen himpunan.</p>
+                </div>
+
+                <!-- Card 5: Statistika -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Statistika Dasar</h3>
+                    <p class="text-slate-600 mb-4">Menyajikan data dalam bentuk tabel/diagram, serta menghitung nilai rata-rata (mean), nilai tengah (median), dan modus.</p>
+                </div>
+
+                <!-- Card 6: Persamaan Linear -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center mb-4 text-2xl font-bold">
+                        y=x
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">PLSV & PtLSV</h3>
+                    <p class="text-slate-600 mb-4">Persamaan dan Pertidaksamaan Linear Satu Variabel. Belajar cara mencari nilai pengganti variabel yang memenuhi persamaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION (JavaScript Playground) -->
+    <section id="interaktif" class="py-20 bg-indigo-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Lab Interaktif: Kalkulator Pythagoras</h2>
+                <p class="text-indigo-200">Coba masukkan panjang alas (a) dan tinggi (b) segitiga siku-siku untuk mencari sisi miring (c)!</p>
+            </div>
+
+            <div class="bg-white text-slate-800 rounded-2xl p-8 shadow-2xl max-w-lg mx-auto">
+                <div class="flex justify-center mb-6 text-slate-400">
+                    <!-- Ilustrasi Segitiga -->
+                    <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="40,160 160,160 40,40" fill="#e0e7ff" stroke="#4f46e5" stroke-width="4"/>
+                        <text x="90" y="180" font-size="16" fill="#4f46e5" font-weight="bold">Alas (a)</text>
+                        <text x="10" y="110" font-size="16" fill="#4f46e5" font-weight="bold" transform="rotate(-90 10 110)">Tinggi (b)</text>
+                        <text x="100" y="90" font-size="16" fill="#ef4444" font-weight="bold" transform="rotate(45 100 90)">Sisi Miring (c)</text>
+                        <!-- Right angle square -->
+                        <rect x="40" y="140" width="20" height="20" fill="none" stroke="#4f46e5" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Panjang Alas (a):</label>
+                        <input type="number" id="inputA" placeholder="Masukkan angka..." class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Panjang Tinggi (b):</label>
+                        <input type="number" id="inputB" placeholder="Masukkan angka..." class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <button onclick="hitungPythagoras()" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 mt-2">
+                        Hitung Sisi Miring (c)
+                    </button>
+                </div>
+
+                <!-- Hasil Kalkulasi -->
+                <div id="hasilBox" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
+                    <p class="text-sm text-green-800 mb-1">Hasil Perhitungan (c² = a² + b²):</p>
+                    <p id="hasilAngka" class="text-3xl font-extrabold text-green-600">0</p>
+                    <p id="langkahPenyelesaian" class="text-xs text-green-700 mt-2 font-mono"></p>
+                </div>
+                <!-- Error Box -->
+                <div id="errorBox" class="hidden mt-6 p-4 bg-red-50 border border-red-200 rounded-lg text-center">
+                    <p class="text-sm text-red-600">Harap masukkan angka yang valid (lebih besar dari 0) pada kolom a dan b.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Ruang MTK SMP. Dibuat untuk memudahkan belajar matematika.</p>
+        </div>
+    </footer>
+
+    <!-- BAGIAN JAVASCRIPT -->
+    <!-- Logika javascript sengaja diletakkan di bagian bawah HTML sesuai best practice DOM load -->
+    <script>
+        // 1. Logika untuk Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 2. Logika untuk Kalkulator Pythagoras
+        function hitungPythagoras() {
+            // Mengambil nilai dari input
+            const valA = parseFloat(document.getElementById('inputA').value);
+            const valB = parseFloat(document.getElementById('inputB').value);
+            
+            const hasilBox = document.getElementById('hasilBox');
+            const errorBox = document.getElementById('errorBox');
+            const hasilAngka = document.getElementById('hasilAngka');
+            const langkahPenyelesaian = document.getElementById('langkahPenyelesaian');
+
+            // Validasi Input
+            if (isNaN(valA) || isNaN(valB) || valA <= 0 || valB <= 0) {
+                // Tampilkan error jika input kosong, bukan angka, atau minus
+                hasilBox.classList.add('hidden');
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            // Hitung Pythagoras: c = akar(a^2 + b^2)
+            const kuadratA = Math.pow(valA, 2);
+            const kuadratB = Math.pow(valB, 2);
+            const hasilC = Math.sqrt(kuadratA + kuadratB);
+
+            // Format hasil agar tidak terlalu panjang desimalnya
+            const hasilAkhir = Number.isInteger(hasilC) ? hasilC : hasilC.toFixed(2);
+
+            // Tampilkan hasil ke DOM
+            errorBox.classList.add('hidden');
+            hasilBox.classList.remove('hidden');
+            
+            hasilAngka.textContent = `c = ${hasilAkhir}`;
+            langkahPenyelesaian.innerHTML = `
+                c = &radic;(${valA}&sup2; + ${valB}&sup2;)<br>
+                c = &radic;(${kuadratA} + ${kuadratB})<br>
+                c = &radic;(${kuadratA + kuadratB})<br>
+                c = ${hasilAkhir}
+            `;
+        }
+    </script>
+</body>
+</html>
